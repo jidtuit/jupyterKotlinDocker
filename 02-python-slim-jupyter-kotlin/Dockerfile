@@ -9,6 +9,8 @@ RUN pip install jupyterlab kotlin-jupyter-kernel
 VOLUME [ "/home/work" ]
 WORKDIR /home/work
 
+EXPOSE 8888
+
 # Issue: https://github.com/codenvy/codenvy/issues/2427
 CMD [ "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root" ]
 
